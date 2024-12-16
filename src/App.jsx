@@ -1,25 +1,25 @@
 import { useState } from 'react'
-import date from './data/languages'
-import Post from './components/Post'
+import data from './data/languages'
+import Btn from './components/Btn'
 
 function App() {
-  const [title, setTitle] = useState(0)
-  const [desc, setDesc] = useState(0)
-
-  // console.log(count, setCount);
+  const [card, setCard] = useState(0)
 
   return (
     <>
-      {date.map(curPost => {
-        return (<Post
-          key={curPost.id}
-          post={curPost}
-          setTitle={setTitle}
-          setDesc={setDesc} />)
+      {data.map(curPost => {
+        return (
+          <Btn
+            key={curPost.id}
+            post={curPost}
+            // quanto verrà invocata la funzione setTitle come props invocherà la funzione seTitle per aggiornare il valore dello state
+            onClick={() => setCard(curPost)}
+          />)
       })
       }
-      <div class="counter">{title}</div>
-      <div class="counter">{desc}</div>
+
+      <div class="counter">{card.title}</div>
+      <div class="counter">{card.description}</div>
     </>
   )
 }
