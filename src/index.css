@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: lightgray;
+    padding: 4px;
+}
+
+nav {
+    width: 80%;
+    margin: 24px auto;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.content .title {
+    font-weight: 600;
+    padding: 4px;
+}
